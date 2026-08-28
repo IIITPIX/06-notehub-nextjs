@@ -1,5 +1,5 @@
-import Footer from "@/components/footer/page";
-import Header from "@/components/header/page";
+import Footer from "@/components/Footer/page";
+import Header from "@/components/Header/page";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 import "./globals.css";
 export default function RootLayout({ children }: LayoutProps<"/">) {
