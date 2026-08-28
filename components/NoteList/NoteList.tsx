@@ -18,9 +18,6 @@ export default function NoteList({ notes }: NoteListProps) {
     },
   });
 
-  function handleDelete(id: string) {
-    mutation.mutate({ id });
-  }
   return (
     <ul className={css.list}>
       {notes.map((note) => {
@@ -35,7 +32,7 @@ export default function NoteList({ notes }: NoteListProps) {
               </Link>
               <button
                 className={css.button}
-                onClick={() => handleDelete(note.id)}
+                onClick={() => mutation.mutate({ id: note.id })}
               >
                 Delete
               </button>
