@@ -15,7 +15,7 @@ export default async function NodeDetails({ params }: NodeDetailsProps) {
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery({
-    queryKey: ["id", id],
+    queryKey: ["note", id],
     queryFn: () => fetchNoteById({ id }),
   });
 

@@ -6,7 +6,7 @@ import { fetchNoteById } from "@/lib/api";
 export default function NoteDetailsClient() {
   const { id } = useParams<{ id: string }>();
   const { data, isLoading, isError } = useQuery({
-    queryKey: ["id", id],
+    queryKey: ["note", id],
     queryFn: () => fetchNoteById({ id }),
     refetchOnMount: false,
   });

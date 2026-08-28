@@ -62,17 +62,7 @@ interface FetchNoteById {
   id: string;
 }
 
-interface FetchNoteByIdData {
-  id: string;
-  title: string;
-  content: string;
-  createdAt: string;
-  updatedAt: string;
-  tag: string;
-}
-export async function fetchNoteById({
-  id,
-}: FetchNoteById): Promise<FetchNoteByIdData> {
-  const { data } = await axios.get<FetchNoteByIdData>(`/notes/${id}`);
+export async function fetchNoteById({ id }: FetchNoteById): Promise<Note> {
+  const { data } = await axios.get<Note>(`/notes/${id}`);
   return data;
 }
