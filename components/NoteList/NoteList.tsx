@@ -32,7 +32,7 @@ export default function NoteList({ notes }: NoteListProps) {
               </Link>
               <button
                 className={css.button}
-                onClick={() => mutation.mutate({ id: note.id })}
+                onClick={() => mutation.mutate(note.id)}
               >
                 Delete
               </button>
